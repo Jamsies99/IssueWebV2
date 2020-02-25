@@ -59,13 +59,12 @@ body {
   position: fixed;
   display: flex;
   flex-direction: column;
-  background-color: orange;
   width: 400px;
   height: 300vh;
   margin-left: 10px;
   margin-right: 10px;
-  border-style: solid;
-  border-color: black;
+  border-style: double;
+  border-color: orange;
 }
 #paragraph{
   flex-wrap: wrap;
@@ -84,7 +83,7 @@ body {
   height: 100vh;
   margin-left: 775px;
   margin-right: 0px;
-  border-style: solid;
+  border-style: double;
   border-color: orange;
 }
 
