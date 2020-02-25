@@ -80,13 +80,12 @@ body {
 #leftContainer{
   position: fixed;
   justify-content: center;
-  background-color: orange;
   width: 400px;
   height: 100vh;
   margin-left: 775px;
   margin-right: 0px;
   border-style: solid;
-  border-color: black;
+  border-color: orange;
 }
 
 #leftContainer p{
