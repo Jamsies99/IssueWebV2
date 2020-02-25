@@ -63,8 +63,6 @@ body {
   height: 300vh;
   margin-left: 10px;
   margin-right: 10px;
-  border-style: double;
-  border-color: orange;
 }
 #paragraph{
   flex-wrap: wrap;
@@ -83,8 +81,7 @@ body {
   height: 100vh;
   margin-left: 775px;
   margin-right: 0px;
-  border-style: double;
-  border-color: orange;
+
 }
 
 #leftContainer p{
