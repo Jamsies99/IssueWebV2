@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Solutions</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+        <video id ="video1" class= "video"  muted>
+          <source src ="clips/kennyClip2.mp4" type="video/mp4">
+        </video>
+        <video id ="video2" class= "video"  muted>
+          <source src ="clips/alchemistClip.mp4" type="video/mp4">
+          </video>
+        <video id ="video3" class= "video"  muted>
+          <source src ="clips/kennyClip.mp4" type="video/mp4">
+        </video>
+        <video id ="video4" class= "video"  muted>
+          <source src ="clips/alchemistClip2.mp4" type="video/mp4">
+        </video>
+        <video id ="video5" class= "video"  muted>
+          <source src ="clips/daringerClip2.mp4" type="video/mp4">
+        </video>
+        <video id ="video6" class= "video"  muted>
+          <source src ="clips/alchemistClip3.mp4" type="video/mp4">
+        </video>
+        <video id ="video7" class= "video"  muted>
+          <source src ="clips/daringerClip.mp4" type="video/mp4">
+        </video>
+        <!--JavaScript to cycle through clips-->
+      <script>
+        window.onload = function(){
+        //now that the window has loaded we add our event listeners to the videos.
+        //When video1 has ended, play video2 etc
+
+
+
+        playVideo("video1");
+        document.getElementById("video1").addEventListener("ended", function(){ playVideo("video2"); });
+        document.getElementById("video2").addEventListener("ended", function(){ playVideo("video3"); });
+        document.getElementById("video3").addEventListener("ended", function(){ playVideo("video4"); });
+        document.getElementById("video4").addEventListener("ended", function(){ playVideo("video5"); });
+        document.getElementById("video5").addEventListener("ended", function(){ playVideo("video6"); }); // NOTE: Missing semicolon
+        document.getElementById("video6").addEventListener("ended", function(){ playVideo("video7"); }); // NOTE: Missing the listener for "video6"
+        document.getElementById("video7").addEventListener("ended", function(){ playVideo("video1"); }); // NOTE: Missing semicolon
+    }
+
+    function playVideo(videoID){
+        //This playVideo function takes in the ID of a video element and plays that video.
+        var videoElement = document.getElementById(videoID);
+        console.log(videoElement);
+        videoElement.currentTime = 0; // NOTE: Rewind video to the start if we have already played it
+        videoElement.play();
+
+
+        var allVideoElements = document.getElementsByClassName('video');
+
+        for (var i = 0; i < allVideoElements.length; i++) {
+          if (allVideoElements[i] != videoElement) {
+            // Hide non-playing videos
+            allVideoElements[i].style.display = 'none';
+          }
+          else {
+            // Show playing video
+            videoElement.style.display = 'block';
+          }
+        }
+
+
+    }
+    </script>
+
+    <div id="menuBar">
+      <p><a href="index.html">Home</a>
+      <a href="page2.html">About</a>
+      <a href="page3.html">Solutions</a></p>
+    </div>
+
+    <div id="titleBanner">
+      <h1 id ="titleText">What Can We Do?</h1>
+    </div>
+    <div id = "mainContainer">
+      <p id ="paragraph">Think about why you like your favorite song.
+        If it is, try to find out who produced it, and what other songs
+        they've worked on. Not only will this allow you to find out other
+      songs that may interest you, you are also showing support to Producers
+  </p>
+    </div>
+    <div id="leftContainer">
+       <p><a href ="https://www.theguardian.com/music/2015/aug/20/paid-in-full-are-hip-hop-producers-being-exploited"> Article</p>
+         <p><a href ="https://www.complex.com/music/2019/04/best-hip-hop-producers"> Explore Producers</p>
+
+    </div>
+
+  </body>
+</html>
